@@ -1,3 +1,7 @@
+// require dotenv and configure it
+require("dotenv").config();
+const backendUrl = process.env.BACKEND_BASE_URL || "http://localhost:4000";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -13,5 +17,10 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: "./components/ui",
+  },
+  runtimeConfig: {
+    public: {
+      apiPath: backendUrl,
+    },
   },
 });

@@ -6,14 +6,15 @@
       <p>
         {{ data.description }}
       </p>
-      <div
-        class="hover:text-primary-800 border-b-primary-800 w-fit items-center hover:border-b transition-all flex gap-2 cursor-pointer"
-      >
+      <NuxtLink
+      :to="data.link"
+        class="hover:text-primary-800 w-fit items-center transition-all flex gap-2 cursor-pointer"
+      > 
         <p>
           {{ data.action }}
         </p>
         <Icon name="fluent:arrow-right-24-filled"></Icon>
-      </div>
+      </NuxtLink>
     </div>
 
     <img :src="data.image"  class="h-[250px] w-full" :class="{ '-order-1': reverse }"></img>

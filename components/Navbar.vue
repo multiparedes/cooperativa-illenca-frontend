@@ -10,7 +10,7 @@
       </p>
     </NuxtLink>
 
-    <div class="flex gap-1">
+    <div class="flex gap-1 items-center">
       <Button variant="link">Contacte</Button>
       <Button variant="link">Reserves</Button>
       <Menubar>
@@ -19,12 +19,21 @@
             <Button variant="link">Informació</Button>
           </MenubarTrigger>
           <MenubarContent>
-            <MenubarItem>Plantes</MenubarItem>
-            <MenubarItem>Jardins</MenubarItem>
+            <MenubarItem>
+              <nuxt-link to="/plantes">Plantes</nuxt-link>
+            </MenubarItem>
+            <MenubarItem>
+              <nuxt-link to="/jardins">Jardins</nuxt-link>
+            </MenubarItem>
             <MenubarItem>Preus</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
+      <span
+        class="grid place-content-center cursor-pointer hover:bg-primary-500 rounded-full transition-colors hover:text-white aspect-square px-2 py-1"
+      >
+        <Icon variant="link" name="fluent:person-32-filled" />
+      </span>
     </div>
   </Card>
 </template>

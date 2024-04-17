@@ -9,7 +9,6 @@
   <div class="grid grid-cols-2 gap-4">
     <LandingCard :data="plantes"></LandingCard>
     <LandingCard :data="jardins" reverse></LandingCard>
-    <Card class="col-span-2"> <p>Preus</p> </Card>
   </div>
 </template>
 
@@ -20,6 +19,7 @@ const plantes = {
     "La millor varietat de plantes amb la millor qualitat illenca possible.",
   action: "Totes les plantes",
   image: "planta.jpeg",
+  link: "/plantes",
 };
 
 const jardins = {

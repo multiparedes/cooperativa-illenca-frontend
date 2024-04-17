@@ -21,7 +21,15 @@ const forwardedProps = useForwardProps(delegatedProps);
 </script>
 
 <template>
-  <MenubarTrigger v-bind="forwardedProps">
+  <MenubarTrigger
+    v-bind="forwardedProps"
+    :class="
+      cn(
+        'flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none hover:text-slate-900 data-[state=open]:text-slate-900 dark:hover:text-slate-50 dark:data-[state=open]:text-slate-50',
+        props.class
+      )
+    "
+  >
     <slot />
   </MenubarTrigger>
 </template>
